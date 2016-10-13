@@ -1,0 +1,72 @@
+html{box-sizing: border-box;}
+*,*:before,*:after{box-sizing: inherit;}
+#container{
+	position: relative;
+}
+.header{
+	height: 100px;
+	width:100%;
+	background-color: red;
+	position: fixed;
+	z-index: 99999;
+	margin-top: -100px;
+	
+}
+.restaurant{
+	margin-top: 100px;
+	height: 450px;
+	width: 100%;
+	background-color: blue;
+}
+.foodpics{
+	height: 300px;
+	width: 100%;
+	background-color: yellow;
+}
+
+
+#column{
+	height: 900px;
+	width: 500px;
+	background-color: white;
+	display: inline-block;
+    border: 1px solid black;
+    float: left;
+    margin-top: 20px;
+}
+.special{
+   width: 498px;
+   height: 299px;
+   background-color: #ccc;
+   margin-top: -20px;
+}
+.news{
+   width: 498px;
+   height: 299px;
+   background-color: #eee;
+   margin-top: -20px;
+}
+.location{
+   width: 498px;
+   height: 299px;
+   background-color: #ddd;
+   margin-top: -20px;
+}
+
+
+.tabs{
+	height: 600px;
+	
+	background-color: pink;	
+	
+}
+.photo{
+	height: 278px;
+    background-color: green;
+}
+.footer{
+	height: 30px;
+	width: auto;
+	color: white;
+	background-color: black;
+}
