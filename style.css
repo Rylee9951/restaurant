@@ -1,17 +1,48 @@
-html{box-sizing: border-box;}
-*,*:before,*:after{box-sizing: inherit;}
-#container{
-	position: relative;
+html{
+	box-sizing: border-box;
 }
+*,*:before,*:after{
+	box-sizing: inherit;
+}
+
+#container{
+	width: 100%;
+}
+
+#bg_overlay {
+background-color: rgba(0,0,0,0.5);
+position: absolute;
+z-index: 3;
+top:0;
+bottom:0;
+left:0;
+right:0;
+}
+
+#logo__header {
+	background-repeat: no-repeat;
+	background-image: url(images/Lagoon_Valley_Logo.png);
+	z-index: 2;
+	width: 292px;
+	height: 234px;
+	background-position-y: 15px;
+	background-position-x: 50px;
+	background-size: 150px;
+}
+
 .header{
-	height: 100px;
+	height: 150px;
 	width:100%;
-	background-color: red;
+	background-image: url(images/Oceansidepier.jpg);
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position-y:-1669px;
 	position: fixed;
 	z-index: 99999;
-	margin-top: -10px;
-	
-}
+	margin-top: -100px;
+	}
+
+
 .restaurant{
 	margin-top: 100px;
 	height: 530px;
@@ -19,36 +50,32 @@ html{box-sizing: border-box;}
 	background-color: blue;
 }
 
-p{
-	margin-top: 0;
-}
-h1{
-	margin-top: 0;
-}
-h2{
+p h1 h2{
 	margin-top: 0;
 }
 
 
 
+i{
+	color:red;
+}
 
 
 .tabs{
 	height: 600px;
-	
 	background-color: pink;	
-	
 }
+
 label{
 	font-size: 20px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-
 }
+
 input{
 	border-radius: 3px;
 	width: 170px;
-	
 }
+
 button{
 	width: 100px;
 	height: 30px;
@@ -56,15 +83,16 @@ button{
 	border-radius: 3px;
 	color:white;
 }
+
 button:hover{
 	background-color: white;
 	color: black;
 }
+
 select{
 	width: 175px;
 	height: 35px;
 }
-
 
 .footer{
 	height: 50px;
