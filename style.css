@@ -1,20 +1,55 @@
-html{box-sizing: border-box;}
-*,*:before,*:after{box-sizing: inherit;}
+html{
+	box-sizing: border-box;
+}
+*,*:before,*:after{
+	box-sizing: inherit;
+}
+
 #container{
 	width: 100%
 }
-.header{
-	height: 100px;
-	width:100%;
-	background-color: red;
-	position: fixed;
-	z-index: 99999;
-	margin-top: -100px;
-	
+
+#bg_overlay {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 3;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
-.restaurant{
+
+#logo__header {
+	background-repeat: no-repeat;
+	background-image: url(images/Lagoon_Valley_Logo.png);
+	z-index: 2;
+	width: 292px;
+	height: 234px;
+	background-position-y: 35px;
+	background-position-x: 50px;
+	background-size: 200px;
 	
+
+}
+
+.header{
+	height: 250px;
+	width:100%;
+	background-image: url(images/Oceansidepier.jpg);
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position-y:-1669px;
+	position: fixed;
+	margin-top: 0px;
+    margin-left: 0;
+    padding-left: 0;
+	z-index: 9;
+}
+
+
+.restaurant{
 	margin-top: 100px;
+		
 	height: 530px;
 	width: 100%;
 	
