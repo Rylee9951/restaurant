@@ -4,7 +4,7 @@ html{box-sizing: border-box;}
 	position: relative;
 }
 .header{
-	height: 250px;
+	height: 100px;
 	width:100%;
 	background-color: red;
 	position: fixed;
