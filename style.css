@@ -9,7 +9,7 @@ html{box-sizing: border-box;}
 	background-color: red;
 	position: fixed;
 	z-index: 99999;
-	margin-top: -100px;
+	margin-top: -10px;
 	
 }
 .restaurant{
