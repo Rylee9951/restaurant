@@ -2,6 +2,7 @@ html{box-sizing: border-box;}
 *,*:before,*:after{box-sizing: inherit;}
 #container{
 	position: relative;
+	width: 100%;
 }
 .header{
 	height: 100px;
@@ -30,12 +31,8 @@ h2{
 }
 
 
-
-
-
 .tabs{
 	height: 600px;
-	
 	background-color: pink;	
 	
 }
@@ -72,3 +69,24 @@ select{
 	color: white;
 	background-color: black;
 }
+
+#map {
+	height: 530px;
+	width: 50%;
+	margin: auto;
+	padding-top: 81px
+}
+
+#news {
+	padding: 0;
+}
+
+h1 {
+	padding:0;	
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+
+
