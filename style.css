@@ -145,7 +145,7 @@ textarea{
 	
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder 
   color: #ccc;
   font-size: 25px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
