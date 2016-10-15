@@ -6,17 +6,17 @@ html{
 }
 
 #container{
-	width: 100%;
+	width: 100%
 }
 
 #bg_overlay {
-background-color: rgba(0,0,0,0.5);
-position: absolute;
-z-index: 3;
-top:0;
-bottom:0;
-left:0;
-right:0;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 3;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
 
@@ -25,7 +25,7 @@ right:0;
 	background-image: url(images/Lagoon_Valley_Logo.png);
 	z-index: 2;
 	width: 292px;
-	height: 234px;
+	height: 140px;
 	background-position-y: 15px;
 	background-position-x: 50px;
 	background-size: 150px;
@@ -42,16 +42,60 @@ right:0;
 	background-position-y:-1669px;
 	position: fixed;
 	margin-top: -100px;
-
-	
+	margin-top: 0px;
+    margin-left: 0;
+    padding-left: 0;
+	z-index: 9;
 }
 
 
 .restaurant{
 	margin-top: 100px;
+		
 	height: 530px;
 	width: 100%;
-	background-color: blue;
+	
+	
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute; 
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 10;
+
+}
+.next{
+	right: 0
+}
+.pics{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	opacity: 0;
+    transition: opacity 0.5s;
+}
+.pics img:first-child{
+	width: 100%;
+}
+.title{
+	color: white;
+	position: absolute;
+}
+.current{
+	z-index: 2;
+   
+}
+.opacity{
+	opacity: 1;
 }
 
 p{
@@ -65,15 +109,52 @@ h2{
 }
 
 
-
-
-
 .tabs{
-	height: 600px;
-	
-	background-color: pink;	
+	height: 700px;
+	margin-top: 600px;
+	background-color: white;	
 	
 }
+
+.tab__buttons {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 150px;
+	margin-right: 150px;
+	font-size: 22px;
+
+}
+
+.tab {
+	background-color: #ff6600;
+	color:white;
+	padding: 10px 15px;
+	border-radius: 2px;
+}
+
+.content {
+	display: none;
+	margin-top: 100px;
+}
+
+#location {
+	height: 445px;
+	width: 50%;
+	margin: auto;
+	padding-top: 0px;
+}
+
+.show {
+	display: block;
+}
+
+.about {
+	line-height: 30px;
+	width: 1500px;
+}
+
 label{
 	font-size: 20px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -86,10 +167,11 @@ input{
 }
 button{
 	width: 100px;
-	height: 30px;
+	height: 40px;
 	background-color: red;
 	border-radius: 3px;
 	color:white;
+	border: 0px;
 }
 button:hover{
 	background-color: white;
@@ -102,6 +184,7 @@ select{
 
 
 .footer{
+	
 	height: 50px;
 	width: auto;
 	color: white;
