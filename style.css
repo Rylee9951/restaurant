@@ -1,12 +1,20 @@
 html{
 	box-sizing: border-box;
 }
+
+html, body {
+	width:100%;
+	height:100%;
+	background-color: #602C1C;
+}
 *,*:before,*:after{
 	box-sizing: inherit;
 }
 
 #container{
-	width: 100%
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 #bg_overlay {
@@ -25,7 +33,7 @@ html{
 	background-image: url(images/Lagoon_Valley_Logo.png);
 	z-index: 2;
 	width: 292px;
-	height: 140px;
+	height: 134px;
 	background-position-y: 15px;
 	background-position-x: 50px;
 	background-size: 150px;
@@ -50,9 +58,7 @@ html{
 
 
 .restaurant{
-	margin-top: 100px;
-		
-	height: 530px;
+	height: 50%;
 	width: 100%;
 	
 	
@@ -86,10 +92,6 @@ html{
 .pics img:first-child{
 	width: 100%;
 }
-.title{
-	color: white;
-	position: absolute;
-}
 .current{
 	z-index: 2;
    
@@ -98,40 +100,70 @@ html{
 	opacity: 1;
 }
 
-p{
+p h1 h2{
 	margin-top: 0;
 }
-h1{
-	margin-top: 0;
-}
-h2{
-	margin-top: 0;
-}
+
 
 
 .tabs{
-	height: 700px;
-	margin-top: 600px;
-	background-color: white;	
+	padding-top:600px;
 	
 }
 
+.reservations{
+	border:1px solid black;
+	box-shadow: 10px 10px 5px #888888;
+	width: 50%;
+	margin:auto;
+	padding: 10px;
+	height: 350px;
+}
+.left{
+	margin: auto;
+}
+
+textarea{
+	border-radius: 3px;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 14px;
+	
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+  font-size: 22px;
+  font-family: "Playfair Display SC", Helvetica, sans-serif;
+}
 .tab__buttons {
 	list-style: none;
 	padding-left: 0;
 	display: flex;
-	justify-content: space-between;
-	margin-left: 150px;
-	margin-right: 150px;
-	font-size: 22px;
+	justify-content: space-around;
+	font-size: 30px;
+	width: 100%;
 
 }
 
 .tab {
-	background-color: #ff6600;
 	color:white;
-	padding: 10px 15px;
+	padding: 5px 30px 5px;
 	border-radius: 2px;
+	font-family: 'Abhaya Libre', serif;
+	width: 15%;
+	transition: background, color, .5s;
+	text-align: center;
+}
+
+.tab:hover {
+	color:#602C1C;
+	padding: 5px 30px 5px;
+	border-radius: 2px;
+	font-family: 'Abhaya Libre', serif;
+	width: 15%;
+	background-color: white;
+	text-align: center;
+
 }
 
 .content {
@@ -150,7 +182,14 @@ h2{
 	display: block;
 }
 
-.about {
+#bio {
+	width: auto; 
+	height: 675px;
+	display: block;
+	margin: auto;
+}
+
+.story {
 	line-height: 50px;
 	width: 1500px;
 	margin: auto;
@@ -160,37 +199,49 @@ h2{
 }
 
 label{
-	font-size: 20px;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 22px;
+	margin:auto;
+}
 
+#dates{
+	margin: auto;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 22px;
+	
 }
 input{
 	border-radius: 3px;
-	width: 170px;
-	
+	width: 250px;
+	height: 52px;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 22px;
+	margin: auto;
 }
 button{
-	width: 100px;
-	height: 40px;
+	width: 150px;
+	height: 45px;
 	background-color: red;
-	border-radius: 3px;
-	color:white;
+	border-radius: 8px;
+	color: white;
 	border: 0px;
+	margin: auto;
 }
 button:hover{
 	background-color: white;
 	color: black;
 }
 select{
-	width: 175px;
+	width: 200px;
 	height: 35px;
+	margin: auto;
 }
 
 
 .footer{
-	
 	height: 50px;
-	width: auto;
+	width: 100%;
 	color: white;
 	background-color: black;
+	position: relative;
 }
