@@ -151,8 +151,12 @@ h2{
 }
 
 .about {
-	line-height: 30px;
+	line-height: 50px;
 	width: 1500px;
+	margin: auto;
+	font-family: 'Alice', serif;
+	font-size: 20px;
+	color: #000
 }
 
 label{
