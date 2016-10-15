@@ -104,12 +104,12 @@ p h1 h2{
 	margin-top: 0;
 }
 
-
-
 .tabs{
-	padding-top:600px;
-	
+   padding-top: 425px;
 }
+
+
+
 
 .reservations{
 	border:1px solid black;
@@ -130,7 +130,7 @@ textarea{
 	
 }
 
-::-webkit-input-placeholder 
+::-webkit-input-placeholder{ 
   color: #ccc;
   font-size: 22px;
   font-family: "Playfair Display SC", Helvetica, sans-serif;
