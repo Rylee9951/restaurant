@@ -104,8 +104,14 @@ p h1 h2{
 	margin-top: 0;
 }
 
+#picmatch {
+	width: 1280px;
+	height: 720px;
+}
+
 .tabs{
-   padding-top: 425px;
+	padding-top:175px;
+	
 }
 
 
