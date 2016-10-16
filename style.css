@@ -19,21 +19,28 @@ html{
     right:0;
 }
 
+#socialMedia{
+	width:auto;
+	height:50px;
+	background-color: black;
+}
+
+
 #logo__header {
 	background-repeat: no-repeat;
 	background-image: url(images/Lagoon_Valley_Logo.png);
 	z-index: 2;
 	width: 292px;
-	height: 234px;
-	background-position-y: 35px;
+	height: 150px;
+	background-position-y: 15px;
 	background-position-x: 50px;
-	background-size: 200px;
-	
+	background-size: 150px;
+	color:blue;
 
 }
 
 .header{
-	height: 250px;
+	height: 150px;
 	width:100%;
 	background-image: url(images/Oceansidepier.jpg);
 	background-size: auto;
@@ -46,10 +53,13 @@ html{
 	z-index: 9;
 }
 
+input, textarea{
+	border:1px solid black;
+}
+
 
 .restaurant{
-	margin-top: 100px;
-		
+	margin-top: 100px;	
 	height: 530px;
 	width: 100%;
 	
@@ -79,7 +89,7 @@ html{
 	z-index: -1;
 	width: 100%;
 	opacity: 0;
-    transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 .pics img:first-child{
 	width: 100%;
@@ -96,47 +106,73 @@ html{
 	opacity: 1;
 }
 
-p{
-	margin-top: 0;
-}
-h1{
-	margin-top: 0;
-}
-h2{
+p h1 h2{
 	margin-top: 0;
 }
 
+p 	{
+	margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: "Alice", sans-serif;
+	padding:10px;
+	border:5px solid black;
+	border-radius:5px;
+}
 
+.openTable{
+	height:40px;
+	width:45px;
+	float:right;
+	background-color: white;	
+	border-radius: 5px;
+	margin: 4px 10px 0px 10px;
+}
+
+i{
+	color: white;	
+	background-color: black;
+	float:right;
+	z-index: 20;
+	text-align: center;
+	margin:0px 10px 10px 10px;
+}
 
 
 
 .tabs{
 	height: 700px;
 	margin-top: 318px;
-	background-color: pink;	
+	
 	
 }
+
 label{
 	font-size: 20px;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-
+	font-family: "Playfair Display Sc", Helvetica, sans-serif;
+	
 }
+
 input{
 	border-radius: 3px;
 	width: 170px;
 	
 }
+
 button{
 	width: 100px;
-	height: 30px;
+	height: 40px;
 	background-color: red;
 	border-radius: 3px;
 	color:white;
+	border:0px;
+	margin-top: 10px;
 }
+
 button:hover{
-	background-color: white;
-	color: black;
+	background-color: #009688;
+	color: white;
 }
+
 select{
 	width: 175px;
 	height: 35px;
