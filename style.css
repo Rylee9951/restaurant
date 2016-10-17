@@ -54,6 +54,14 @@ html, body {
 	z-index: 9;
 }
 
+.headerText{
+	color:white;
+	text-align: center;
+	z-index: 10;
+	font-family: "Kaushan Script", sans-serif;
+	font-size: 35px;
+	margin-top: 50px;
+}
 
 .restaurant{
 	height: 50%;
@@ -97,7 +105,6 @@ html, body {
 	opacity: 1;
 }
 
-
 h1 h2{
 	margin-top: 0;
 }
@@ -108,13 +115,16 @@ p{
 }
 
 .notes{
-	margin:20px;
+	
 }
 
 div#reservations.content{
-	width:700px;
+	width:390px;
 	border:2px solid black;
-	margin-left:200px;
+	margin-left:448px;
+	border-radius: 10px;
+	background-color: #f1e9d2;
+
 }
 
 #picmatch {
@@ -130,15 +140,16 @@ h6{
 img#bio{
 	-webkit-filter: grayscale(100%);
 	filter:grayscale(70%);
+	margin-top: 10px;
 }
 
 .reservations{
 	border:1px solid black;
 	box-shadow: 10px 10px 5px #888888;
 	width: 50%;
-	margin:auto;
+	margin:0;
 	padding: 10px;
-	height: 350px;
+	height: 370px;
 }
 
 .left{
@@ -191,7 +202,6 @@ textarea{
 
 }
 
-
 .menuContent{
 	padding:10px 250px 0px 100px ;
 }
@@ -205,7 +215,10 @@ textarea{
 
 #appetizers, #entrees, #sides{
 	padding:10px 250px 0px 100px ;
+	border:10px solid black;
+	background-color: #f1e9d2;
 }
+
 
 #location {
 	height: 445px;
@@ -222,9 +235,8 @@ textarea{
 	width: auto; 
 	height: 675px;
 	display: block;
-
 	margin-bottom:5px;
-	margin:20px 0px 20px 50px ;
+	margin:20px 10px 20px 195px ;
 	border:10px inset brown;
 }
 
@@ -244,8 +256,10 @@ p.story {
 label{
 	font-family: 'Playfair Display SC', sans-serif;
 	font-size: 22px;
-	margin:auto;
+	margin-top:10px;
+	margin-left: 5px;
 }
+
 #dates{
 	margin: auto;
 	font-family: 'Playfair Display SC', sans-serif;
@@ -255,23 +269,26 @@ label{
 input{
 	border-radius: 3px;
 	width: 250px;
-	height: 52px;
+	height: 30px;
 	font-family: 'Playfair Display SC', sans-serif;
 	font-size: 22px;
 	margin: auto;
 }
 button{
-	width: 150px;
+	font-size: 20px;
+	width: 100px;
 	height: 45px;
-	background-color: red;
-	border-radius: 8px;
-	color: white;
-	border: 0px;
-	margin: auto;
+	background-color: #ad1119;
+	border-radius: 5px;
+	color: black;
+	border: 3px solid black;
+	margin-top:5px;
+	font-family: "Alice",sans-serif;
 }
 button:hover{
 	background-color: white;
 	color: black;
+	border:2px solid black;
 }
 select{
 	width: 200px;
@@ -319,18 +336,29 @@ select{
 #newsStory {
 	clear: right;
 	margin-top: 25px;
+	background-color: white;
+	font-family: 
 }
 
 .specialsMenu {
 	width: 25%;
 	margin: auto;
-	padding-top: 100px;
+	padding: 100px;
+}
+
+#specials{
+	font-weight: bold;
+	color:black;
+	font-size: 21px;
+	border:2px solid black;
+	background-color:white;
 }
 
 .menuHeader {
 	font-size: 50px;
 	border-bottom: 1px solid black;
 	font-family: "Playfair Display SC", sans-serif;
+
 }
 
 .menuItem {
@@ -345,9 +373,10 @@ select{
 }
 
 .menuTitle {
-	font-weight: bold;
-	width: 28%;
-	/*float:left;*/
+	font-weight: bolder;
+	width:360px;
+	color:maroon;
+	font-style: underline;
 }	
 /*.tab1copy {}*/
 .dots {
@@ -360,28 +389,30 @@ select{
 }
 
 .price {
-	/*float: right;*/
+	float: right;
 	margin-right: 36px;
+	color:red;
+	font-weight: bolder;
 }
 
 .menuDescription {
 	clear: both;
-	padding-top: 15px;
-	height: 56px;
-	width: 75%;
+	padding-top: 25px;
+	height: 20px;
+	width: 74%;
 	float: left;
+
 	/*border-right: 1px solid black;*/
 }
 
 .menuSymbols {
-	height: 52px;
+	height: 75px;
 	width: 21%;
-	/*background: green;*/
 	float: right;
-	margin-top: 13px;
+	margin-top: 10px;
 	margin-right: 32px;
 	border-left: 3px solid #000;
-	padding: 10px;
+	padding: 45px;
 	display: flex;
 	justify-content: space-around;
 }
@@ -399,6 +430,7 @@ i {
 	width: 30px;
 	color:white;
 	float:right;
+	margin-right: 10px;
 }
 
 #socialMedia > img{
@@ -409,6 +441,8 @@ i {
 	border:2px solid black;
 	top: 10px;
 	float:right;
+	margin-right: 10px;
+	
 }
 
 /*#appetizersPlacement {
