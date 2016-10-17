@@ -1,12 +1,20 @@
 html{
 	box-sizing: border-box;
 }
+
+html, body {
+	width:100%;
+	height:100%;
+	background-color: #602C1C;
+}
 *,*:before,*:after{
 	box-sizing: inherit;
 }
 
 #container{
-	width: 100%
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 #bg_overlay {
@@ -19,24 +27,16 @@ html{
     right:0;
 }
 
-#socialMedia{
-	width:auto;
-	height:50px;
-	background-color: black;
-}
-
 
 #logo__header {
 	background-repeat: no-repeat;
 	background-image: url(images/Lagoon_Valley_Logo.png);
 	z-index: 2;
 	width: 292px;
-	height: 150px;
+	height: 134px;
 	background-position-y: 15px;
 	background-position-x: 50px;
 	background-size: 150px;
-	color:blue;
-
 }
 
 .header{
@@ -47,24 +47,19 @@ html{
 	background-repeat: no-repeat;
 	background-position-y:-1669px;
 	position: fixed;
+	margin-top: -100px;
 	margin-top: 0px;
     margin-left: 0;
     padding-left: 0;
 	z-index: 9;
 }
 
-input, textarea{
-	border:1px solid black;
-}
-
 
 .restaurant{
-	margin-top: 100px;	
-	height: 530px;
+	height: 50%;
 	width: 100%;
-	
-	
 }
+
 .prev, .next {
   cursor: pointer;
   position: absolute; 
@@ -89,14 +84,10 @@ input, textarea{
 	z-index: -1;
 	width: 100%;
 	opacity: 0;
-  transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
 .pics img:first-child{
 	width: 100%;
-}
-.title{
-	color: white;
-	position: absolute;
 }
 .current{
 	z-index: 2;
@@ -106,83 +97,336 @@ input, textarea{
 	opacity: 1;
 }
 
-p h1 h2{
+h1 h2{
 	margin-top: 0;
 }
 
-p 	{
-	margin-bottom: 0px;
-  margin-top: 0px;
-  font-family: "Alice", sans-serif;
-	padding:10px;
-	border:5px solid black;
-	border-radius:5px;
+p{
+	padding-top: 0px;
+	margin:5px;
 }
 
-.openTable{
-	height:40px;
-	width:45px;
-	float:right;
-	background-color: white;	
-	border-radius: 5px;
-	margin: 4px 10px 0px 10px;
+.notes{
+	margin:20px;
 }
 
-i{
-	color: white;	
-	background-color: black;
-	float:right;
-	z-index: 20;
+div#reservations.content{
+	width:700px;
+	border:2px solid black;
+	margin-left:200px;
+}
+
+#picmatch {
+	width: 1280px;
+	height: 720px;
+}
+
+h6{
+	margin:0px;
+	background-color:black;
+}
+
+img#bio{
+	-webkit-filter: grayscale(100%);
+	filter:grayscale(70%);
+}
+
+.reservations{
+	border:1px solid black;
+	box-shadow: 10px 10px 5px #888888;
+	width: 50%;
+	margin:auto;
+	padding: 10px;
+	height: 350px;
+}
+
+.left{
+	margin: auto;
+}
+
+textarea{
+	border-radius: 3px;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 14px;
+	
+}
+
+::-webkit-input-placeholder{ 
+  color: #ccc;
+  font-size: 22px;
+  font-family: "Playfair Display SC", Helvetica, sans-serif;
+}
+
+.tab__buttons {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	justify-content: space-around;
+	font-size: 30px;
+	width: 100%;
+
+}
+
+.tab {
+	color:white;
+	padding: 5px 5px 5px;
+	border-radius: 2px;
+	border-width:1px;	
+    border-style:dotted solid;
+	font-family: 'Abhaya Libre', serif;
+	width: 15%;
+	transition: background, color, .5s;
 	text-align: center;
-	margin:0px 10px 10px 10px;
+}
+
+.tab:hover {
+	color:#602C1C;
+	padding: 5px 30px 5px;
+	border-radius: 2px;
+	font-family: 'Abhaya Libre', serif;
+	width: 15%;
+	background-color: white;
+	text-align: center;
+
+}
+
+.menuContent{
+	padding:10px 250px 0px 100px ;
+}
+
+.content {
+	display: none;
+	margin-top: 60px;
+	background-color: white;
+	
+}
+
+#appetizers, #entrees, #sides{
+	padding:10px 250px 0px 100px ;
 }
 
 
+#location {
+	height: 445px;
+	width: 50%;
+	margin: auto;
+	padding-top: 0px;
+}
 
-.tabs{
-	height: 700px;
-	margin-top: 318px;
-	
-	
+.show {
+	display: block;
+}
+
+#bio {
+	width: auto; 
+	height: 675px;
+	display: block;
+	margin-bottom:5px;
+	margin:20px 0px 20px 50px ;
+	border:10px inset brown;
+}
+
+p.story {
+	line-height: 25px;
+	width: 1000px;
+	margin: auto;
+	font-family: 'Josefin Slab', serif;
+	font-size: 20px;
+	color: #000;
+	border-color: white; 
+	border:3px solid;
+	background-color: white;
+	font-weight:bolder;
 }
 
 label{
-	font-size: 20px;
-	font-family: "Playfair Display Sc", Helvetica, sans-serif;
-	
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 22px;
+	margin:auto;
 }
 
+#dates{
+	margin: auto;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 22px;
+	
+}
 input{
 	border-radius: 3px;
-	width: 170px;
-	
+	width: 250px;
+	height: 52px;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-size: 22px;
+	margin: auto;
 }
-
 button{
-	width: 100px;
-	height: 40px;
+	width: 150px;
+	height: 45px;
 	background-color: red;
-	border-radius: 3px;
-	color:white;
-	border:0px;
-	margin-top: 10px;
-}
-
-button:hover{
-	background-color: #009688;
+	border-radius: 8px;
 	color: white;
+	border: 0px;
+	margin: auto;
 }
-
+button:hover{
+	background-color: white;
+	color: black;
+}
 select{
-	width: 175px;
+	width: 200px;
 	height: 35px;
+	margin: auto;
 }
 
 
 .footer{
-	
-	height: 50px;
-	width: auto;
+	height: 35px;
+	width: 100%;
 	color: white;
 	background-color: black;
 }
+
+#location {
+	height: 435px;
+	width: 50%;
+	margin: auto;
+	padding-top: 0px
+}
+
+#news {
+	padding: 0;
+	width: 50%;
+	margin: auto;
+}
+
+#newsTitle {
+	padding-top:50px;	
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 50px;
+	/*background: purple;*/
+}
+#news_datePublished {
+	float: right;
+	margin-right: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#newsStory {
+	clear: right;
+	margin-top: 25px;
+}
+
+.specialsMenu {
+	width: 25%;
+	margin: auto;
+	padding-top: 100px;
+}
+
+.menuHeader {
+	font-size: 50px;
+	border-bottom: 1px solid black;
+	font-family: "Playfair Display SC", sans-serif;
+
+}
+
+.menuItem {
+	margin-left: 10px;
+	width: 75%;
+	margin: auto;
+	margin-bottom: 150px;
+}
+
+.menuTitle, .dots, .price {
+	display: inline-block;
+}
+
+.menuTitle {
+	font-weight: bold;
+	width: 28%;
+	/*float:left;*/
+}	
+/*.tab1copy {}*/
+.dots {
+	/*float: left;*/
+	border-bottom: 2px dotted black;
+	height: 15px;
+	width: 66%;
+	margin-left: 14px;
+
+}
+
+.price {
+	/*float: right;*/
+	margin-right: 36px;
+}
+
+.menuDescription {
+	clear: both;
+	padding-top: 15px;
+	height: 56px;
+	width: 75%;
+	float: left;
+	/*border-right: 1px solid black;*/
+}
+
+.menuSymbols {
+	height: 52px;
+	width: 21%;
+	/*background: green;*/
+	float: right;
+	margin-top: 13px;
+	margin-right: 32px;
+	border-left: 3px solid #000;
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.menuAllergies, .menuFavorite, .menuSpicy, .menuVegan {
+	height: 32px;
+	width: 33px;
+	font-size: 25px;
+	color: #000000;
+	/*display: inline-block;*/
+}
+
+i {
+	height: 30px;
+	width: 30px;
+	color:white;
+	float:right;
+}
+
+#socialMedia > img{
+	height:30px;
+	width:35px;
+	background-color:white;
+	border-radius: 5px;
+	border:2px solid black;
+	top: 10px;
+	float:right;
+	
+}
+
+/*#appetizersPlacement {
+	height: 500px;
+}
+*/
+
+.firstLineMenu {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*#appetizers {
+	height: 500px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+*/
