@@ -97,8 +97,24 @@ html, body {
 	opacity: 1;
 }
 
-p h1 h2{
+
+h1 h2{
 	margin-top: 0;
+}
+
+p{
+	padding-top: 0px;
+	margin:5px;
+}
+
+.notes{
+	margin:20px;
+}
+
+div#reservations.content{
+	width:700px;
+	border:2px solid black;
+	margin-left:200px;
 }
 
 #picmatch {
@@ -106,9 +122,14 @@ p h1 h2{
 	height: 720px;
 }
 
-.tabs{
-	padding-top:175px;
-	
+h6{
+	margin:0px;
+	background-color:black;
+}
+
+img#bio{
+	-webkit-filter: grayscale(100%);
+	filter:grayscale(70%);
 }
 
 .reservations{
@@ -149,8 +170,10 @@ textarea{
 
 .tab {
 	color:white;
-	padding: 5px 30px 5px;
+	padding: 5px 5px 5px;
 	border-radius: 2px;
+	border-width:1px;	
+    border-style:dotted solid;
 	font-family: 'Abhaya Libre', serif;
 	width: 15%;
 	transition: background, color, .5s;
@@ -168,9 +191,20 @@ textarea{
 
 }
 
+
+.menuContent{
+	padding:10px 250px 0px 100px ;
+}
+
 .content {
 	display: none;
-	margin-top: 100px;
+	margin-top: 60px;
+	background-color: white;
+	
+}
+
+#appetizers, #entrees, #sides{
+	padding:10px 250px 0px 100px ;
 }
 
 #location {
@@ -188,16 +222,23 @@ textarea{
 	width: auto; 
 	height: 675px;
 	display: block;
-	margin: auto;
+
+	margin-bottom:5px;
+	margin:20px 0px 20px 50px ;
+	border:10px inset brown;
 }
 
-.story {
-	line-height: 50px;
-	width: 1500px;
+p.story {
+	line-height: 25px;
+	width: 1000px;
 	margin: auto;
-	font-family: 'Alice', serif;
+	font-family: 'Josefin Slab', serif;
 	font-size: 20px;
-	color: #000
+	color: #000;
+	border-color: white; 
+	border:3px solid;
+	background-color: white;
+	font-weight:bolder;
 }
 
 label{
@@ -205,7 +246,6 @@ label{
 	font-size: 22px;
 	margin:auto;
 }
-
 #dates{
 	margin: auto;
 	font-family: 'Playfair Display SC', sans-serif;
@@ -241,7 +281,7 @@ select{
 
 
 .footer{
-	height: 50px;
+	height: 35px;
 	width: 100%;
 	color: white;
 	background-color: black;
@@ -290,6 +330,7 @@ select{
 .menuHeader {
 	font-size: 50px;
 	border-bottom: 1px solid black;
+	font-family: "Playfair Display SC", sans-serif;
 }
 
 .menuItem {
@@ -354,14 +395,27 @@ select{
 }
 
 i {
-	height: 25px;
-	width: 25px;
+	height: 30px;
+	width: 30px;
+	color:white;
+	float:right;
+}
+
+#socialMedia > img{
+	height:30px;
+	width:35px;
+	background-color:white;
+	border-radius: 5px;
+	border:2px solid black;
+	top: 10px;
+	float:right;
 }
 
 /*#appetizersPlacement {
 	height: 500px;
 }
 */
+
 .firstLineMenu {
 	margin-top: 20px;
 	display: flex;
@@ -375,4 +429,3 @@ i {
 	flex-direction: column;
 }
 */
-

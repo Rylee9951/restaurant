@@ -1,104 +1,106 @@
 
 $(document).ready(function() {
-	//NEWS API 
-	$.get("https://json-data.herokuapp.com/restaurant/news/1",function(news) {
-		console.log(news)
-		var newsContent = `
-		      <div id="newsTitle"><p>${news.title}</p></div>
-				<div id="news_datePublished">${news.date_published}</div>
-				<div id="newsStory">${news.post}</div>
-		`
-		$("#news").html(newsContent)
 
-	})
+  //NEWS API 
+  $.get("https://json-data.herokuapp.com/restaurant/news/1",function(news) {
+    console.log(news)
+    var newsContent = `
+          <div id="newsTitle"><p>${news.title}</p></div>
+        <div id="news_datePublished">${news.date_published}</div>
+        <div id="newsStory">${news.post}</div>
+    `
+    $("#news").html(newsContent)
 
-	//SPECIALS MENU API
-	var b = $.get("https://json-data.herokuapp.com/restaurant/special/1", function(specials) {
-		console.log('specials', specials)
-		var specials = `
-			#${specials.id}. ${specials.menu_item_id}................price
-		`
-		$(".specialsMenu").html(specials)
-	})
+  })
 
 
-	//ENTRES, APPETIZERS, ALA CARTE MENU ITEMS API
-	var menuString = ""
-	var entreeMenuString = ""
-	var alaCarteMenuString = ""
+  //SPECIALS MENU API
+  var b = $.get("https://json-data.herokuapp.com/restaurant/special/1", function(specials) {
+    console.log('specials', specials)
+    var specials = `
+      #${specials.id}. ${specials.menu_item_id}................price
+    `
+    $(".specialsMenu").html(specials)
+  })
 
 
-	$.get("https://json-data.herokuapp.com/restaurant/menu/1", function(menuTypes) {
-		console.log('test', menuTypes)
-		menuTypes.appetizers.forEach(function(menuItems) {
-			console.log(menuItems)
-			menuString +=
-				`
-		     	<div class="menuItem">
-					<div class="firstLineMenu">
-						<div class="menuTitle">${menuItems.item}</div>
-			     		<div class="dots"></div>
-			     		<div class="price">$${menuItems.price}</div>
-					</div>
-					<div class="secondLineMenu">
-						<div class="menuDescription">${menuItems.description}</div>
-						<div class="menuSymbols">
-							<div class="menuAllergies">${menuItems.allergies ? '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>' : ""}</div>
-							<div class="menuFavorite">${menuItems.favorite ? '<i class="fa fa-star" aria-hidden="true"></i>' : ""}</div>
-							<div class="menuSpicy">${menuItems.spicy ? '<i class="fa fa-fire" aria-hidden="true">' : ""}</i></div>
-							<div class="menuVegan">${menuItems.vegan ? '<img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/vegan_food_filled-25.png" title="Vegan Food Filled" width="25">' : ""}</div>
-						</div>
-					</div>
-		     	</div>			
-				`
-			})
-
-		menuTypes.entrees.forEach(function(menuItems) {
-			entreeMenuString +=
-				`
-		     	<div class="menuItem">
-					<div class="firstLineMenu">
-						<div class="menuTitle">${menuItems.item}</div>
-			     		<div class="dots"></div>
-			     		<div class="price">$${menuItems.price}</div>
-					</div>
-					<div class="secondLineMenu">
-						<div class="menuDescription">${menuItems.description}</div>
-						<div class="menuSymbols">
-							<div class="menuAllergies">${menuItems.allergies ? '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>' : ""}</div>
-							<div class="menuFavorite">${menuItems.favorite ? '<i class="fa fa-star" aria-hidden="true"></i>' : ""}</div>
-							<div class="menuSpicy">${menuItems.spicy ? '<i class="fa fa-fire" aria-hidden="true">' : ""}</i></div>
-							<div class="menuVegan">${menuItems.vegan ? '<img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/vegan_food_filled-25.png" title="Vegan Food Filled" width="25">' : ""}</div>
-						</div>
-					</div>
-		     	</div>			
-				`
-			})
-
-		menuTypes.sides.forEach(function(menuItems) {
-			alaCarteMenuString +=
-				`
-		     	<div class="menuItem">
-					<div class="firstLineMenu">
-						<div class="menuTitle">${menuItems.item}</div>
-			     		<div class="dots"></div>
-			     		<div class="price">$${menuItems.price}</div>
-					</div>
-					<div class="secondLineMenu">
-						<div class="menuDescription">${menuItems.description}</div>
-					</div>
-		     	</div>			
-				`
-			})		
-
-			$("#appetizersPlacement").html(menuString)
-			$("#entreePlacement").html(entreeMenuString) 
-			$("#sidesPlacement").html(alaCarteMenuString) 
-	})
+  //ENTRES, APPETIZERS, ALA CARTE MENU ITEMS API
+  var menuString = ""
+  var entreeMenuString = ""
+  var alaCarteMenuString = ""
 
 
+  $.get("https://json-data.herokuapp.com/restaurant/menu/1", function(menuTypes) {
+    console.log('test', menuTypes)
+    menuTypes.appetizers.forEach(function(menuItems) {
+      console.log(menuItems)
+      menuString +=
+        `
+          <div class="menuItem">
+          <div class="firstLineMenu">
+            <div class="menuTitle">${menuItems.item}</div>
+              <div class="dots"></div>
+              <div class="price">$${menuItems.price}</div>
+          </div>
+          <div class="secondLineMenu">
+            <div class="menuDescription">${menuItems.description}</div>
+            <div class="menuSymbols">
+              <div class="menuAllergies">${menuItems.allergies ? '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>' : ""}</div>
+              <div class="menuFavorite">${menuItems.favorite ? '<i class="fa fa-star" aria-hidden="true"></i>' : ""}</div>
+              <div class="menuSpicy">${menuItems.spicy ? '<i class="fa fa-fire" aria-hidden="true">' : ""}</i></div>
+              <div class="menuVegan">${menuItems.vegan ? '<img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/vegan_food_filled-25.png" title="Vegan Food Filled" width="25">' : ""}</div>
+            </div>
+          </div>
+          </div>      
+        `
+      })
 
-	var carouselImages = [
+    menuTypes.entrees.forEach(function(menuItems) {
+      entreeMenuString +=
+        `
+          <div class="menuItem">
+          <div class="firstLineMenu">
+            <div class="menuTitle">${menuItems.item}</div>
+              <div class="dots"></div>
+              <div class="price">$${menuItems.price}</div>
+          </div>
+          <div class="secondLineMenu">
+            <div class="menuDescription">${menuItems.description}</div>
+            <div class="menuSymbols">
+              <div class="menuAllergies">${menuItems.allergies ? '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>' : ""}</div>
+              <div class="menuFavorite">${menuItems.favorite ? '<i class="fa fa-star" aria-hidden="true"></i>' : ""}</div>
+              <div class="menuSpicy">${menuItems.spicy ? '<i class="fa fa-fire" aria-hidden="true">' : ""}</i></div>
+              <div class="menuVegan">${menuItems.vegan ? '<img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/vegan_food_filled-25.png" title="Vegan Food Filled" width="25">' : ""}</div>
+            </div>
+          </div>
+          </div>      
+        `
+      })
+
+    menuTypes.sides.forEach(function(menuItems) {
+      alaCarteMenuString +=
+        `
+          <div class="menuItem">
+          <div class="firstLineMenu">
+            <div class="menuTitle">${menuItems.item}</div>
+              <div class="dots"></div>
+              <div class="price">$${menuItems.price}</div>
+          </div>
+          <div class="secondLineMenu">
+            <div class="menuDescription">${menuItems.description}</div>
+          </div>
+          </div>      
+        `
+      })    
+
+      $("#appetizersPlacement").html(menuString)
+      $("#entreePlacement").html(entreeMenuString) 
+      $("#sidesPlacement").html(alaCarteMenuString) 
+  })
+
+
+
+  var carouselImages = [
     {
       image_url: "http://cdn2.viceroyhotelgroup.com/~/media//viceroy_hotels_and_resorts/santamonica/Images/Large-1280x720/vsm-night-event-1280x720.ashx",
     },
@@ -109,7 +111,7 @@ $(document).ready(function() {
       image_url:"http://www.caribbeanluxuryclub.com/wp-content/uploads/2015/11/va-food-coba-104-1280x720.jpg" ,
     },
      { 
-     	image_url: "http://www.viceroyhotelsandresorts.com/~/media/viceroy_hotels_and_resorts/snowmass/Images/Large-1280x720/vs_8k_dining_5222_1280x720.ashx",
+      image_url: "http://www.viceroyhotelsandresorts.com/~/media/viceroy_hotels_and_resorts/snowmass/Images/Large-1280x720/vs_8k_dining_5222_1280x720.ashx",
      },
      {
         image_url:"http://www.lemairerestaurant.com/images/photos/photo-gallery/salmon.jpg",
@@ -236,8 +238,6 @@ function menuIconRender(obj) {
 	}
 
 	return menuSymbols
-}
-
 
 
 
