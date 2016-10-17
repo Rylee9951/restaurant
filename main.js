@@ -117,127 +117,127 @@ $(document).ready(function() {
         image_url:"http://www.lemairerestaurant.com/images/photos/photo-gallery/salmon.jpg",
      },
      {
-     	image_url:"http://www.fourseasons.com/content/dam/fourseasons/images/web/BEV/BEV_535_aspect16x9.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+      image_url:"http://www.fourseasons.com/content/dam/fourseasons/images/web/BEV/BEV_535_aspect16x9.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
      },
      {
-     	image_url:"http://www.fourseasons.com/content/dam/fourseasons/images/web/VGS/VGS_458_aspect16x9.jpg",
+      image_url:"http://www.fourseasons.com/content/dam/fourseasons/images/web/VGS/VGS_458_aspect16x9.jpg",
      }
   ]
 
-		var htmlStr = ""
-		  carouselImages.forEach(function(item,i){
-		     htmlStr += `
-		       <div id="image${i}" class="pics">
-		          <div><img src="${item.image_url}" /></div>
-		           <div class= "prev">&#8656</div>
-		           <div class= "next">&#8658</div>
-		       </div>
-		       `
-		      
-		  })
+    var htmlStr = ""
+      carouselImages.forEach(function(item,i){
+         htmlStr += `
+           <div id="image${i}" class="pics">
+              <div><img src="${item.image_url}" /></div>
+               <div class= "prev">&#8656</div>
+               <div class= "next">&#8658</div>
+           </div>
+           `
+          
+      })
 
-		     $(".restaurant").html(htmlStr)
-		     $(".pics:first-child").addClass("current opacity")
-		 
-		    $(".next").on('click', function(){
-		    
-		        var current = $(".current").attr("id").substr(5)
-		        var nextIndex = Number(current) + 1;
-		  
-		        if(nextIndex === carouselImages.length){
-		        nextIndex = 0
-		        }
-		     
-		      
-		       $(`#image${current}`).removeClass("current opacity")
-		       $(`#image${nextIndex}`).addClass("current opacity")
-		       
-		    })
+         $(".restaurant").html(htmlStr)
+         $(".pics:first-child").addClass("current opacity")
+     
+        $(".next").on('click', function(){
+        
+            var current = $(".current").attr("id").substr(5)
+            var nextIndex = Number(current) + 1;
+      
+            if(nextIndex === carouselImages.length){
+            nextIndex = 0
+            }
+         
+          
+           $(`#image${current}`).removeClass("current opacity")
+           $(`#image${nextIndex}`).addClass("current opacity")
+           
+        })
 
-		    $(".prev").on('click', function(){
-		    
-		        var current = $(".current").attr("id").substr(5)
-		        var prevIndex = Number(current) - 1;
-		  
-		        if(prevIndex === -1){
-		        prevIndex = carouselImages.length-1
-		        }
-		     
-		      
-		     $(`#image${current}`).removeClass("current opacity")
-		     $(`#image${prevIndex}`).addClass("current opacity")
-		     
-		    })
+        $(".prev").on('click', function(){
+        
+            var current = $(".current").attr("id").substr(5)
+            var prevIndex = Number(current) - 1;
+      
+            if(prevIndex === -1){
+            prevIndex = carouselImages.length-1
+            }
+         
+          
+         $(`#image${current}`).removeClass("current opacity")
+         $(`#image${prevIndex}`).addClass("current opacity")
+         
+        })
 
     $(".tab").on('click', function(e){
-	    $(".content").hide()
-	    var content = $(this).attr("content")
-	    $(`#${content}`).show()
-	})
+      $(".content").hide()
+      var content = $(this).attr("content")
+      $(`#${content}`).show()
+  })
 
 }) //DOCUMENT.READY CLOSING TAGS
-				
+        
 function initMap() {
-		//coordinates for address. from www.gps-coordinates.net
-		var coordinates = {
-			lat: 36.1583864,
-			lng: -115.1525016
-		}
-		var map = new google.maps.Map(document.getElementById("location"), {
-			zoom: 17,
-			center: coordinates,
-			styles: [
-				{	
-				featureType: 'poi',
-				elementType: 'labels',
-				stylers: [{visibility: 'off'}]
-				}
-			]
-		})
+    //coordinates for address. from www.gps-coordinates.net
+    var coordinates = {
+      lat: 36.1583864,
+      lng: -115.1525016
+    }
+    var map = new google.maps.Map(document.getElementById("location"), {
+      zoom: 17,
+      center: coordinates,
+      styles: [
+        { 
+        featureType: 'poi',
+        elementType: 'labels',
+        stylers: [{visibility: 'off'}]
+        }
+      ]
+    })
 
-		var contentString = `
-			<h2>Lagoon Valley</h2>
-			<p>Las Vegas' premier find dining seafood experience. Enjoy the freshest seafood the Valley has to offer.</p>
-			<div><b>insert Lagoon Valley Logo here</b></div>
-		`
+    var contentString = `
+      <h2>Lagoon Valley</h2>
+      <p>Las Vegas' premier find dining seafood experience. Enjoy the freshest seafood the Valley has to offer.</p>
+      <div><b>insert Lagoon Valley Logo here</b></div>
+    `
 
-		var infowindow = new google.maps.InfoWindow({
-			content: contentString,
-			maxWidth: 1000
-		});
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 1000
+    });
 
-		var marker = new google.maps.Marker({
-				position: coordinates,
-				map: map,
-				title: 'Lagoon Valley'
-		})
+    var marker = new google.maps.Marker({
+        position: coordinates,
+        map: map,
+        title: 'Lagoon Valley'
+    })
 
-		marker.addListener('click', function() {
-		infowindow.open(map, marker)
-		
-		})
-	}	
+    marker.addListener('click', function() {
+    infowindow.open(map, marker)
+    
+    })
+  } 
 
 function menuIconRender(obj) {
 
-	var menuSymbols = ``;
-	if(obj.allergies) {
-		menuSymbols += `<div class='menuAllergies'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i></div>`
-	}
+  var menuSymbols = ``;
+  if(obj.allergies) {
+    menuSymbols += `<div class='menuAllergies'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i></div>`
+  }
 
-	if(obj.favorite) {
-		menuSymbols += `<div class="menuFavorite"><i class="fa fa-star" aria-hidden="true"></i></div>`
-	}
+  if(obj.favorite) {
+    menuSymbols += `<div class="menuFavorite"><i class="fa fa-star" aria-hidden="true"></i></div>`
+  }
 
-	if(obj.spicy) {
-		menuSymbols += `<div class="menuSpicy"><i class="fa fa-fire" aria-hidden="true"></i></div>`
-	}
+  if(obj.spicy) {
+    menuSymbols += `<div class="menuSpicy"><i class="fa fa-fire" aria-hidden="true"></i></div>`
+  }
 
-	if(obj.vegan) {
-		menuSymbols += `<div class="menuVegan"><i class="fa fa-leaf" aria-hidden="true"></i><div>`
-	}
+  if(obj.vegan) {
+    menuSymbols += `<div class="menuVegan"><i class="fa fa-leaf" aria-hidden="true"></i><div>`
+  }
 
-	return menuSymbols
+  return menuSymbols
 
 
 
